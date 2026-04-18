@@ -10,7 +10,7 @@ jobs:
       uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
     - name: docker_build
       run: |
-        docker_build -t pipeline-test .
+        docker build -t pipeline-test .
     - name: docker_run
       env:
         DJANGO_SECRET_KEY: ${{ secrets.DJANGO_SECRET_KEY }}
