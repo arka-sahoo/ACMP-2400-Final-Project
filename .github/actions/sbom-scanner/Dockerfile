@@ -4,4 +4,7 @@ RUN apt-get update && apt-get install --no-install-recommends -y curl && \
     curl -sSfl https://get.anchore.io/syft | sh -s -- -b /usr/local/bin && \
     curl -sSfL https://get.anchore.io/grype | sh -s -- -b /usr/local/bin
 
-CMD ["echo", "hello-world"]
+COPY requirements.txt .
+
+CMD ["sleep", "infinity"]
+#CMD ["/usr/local/bin/syft", "requirements.txt", "-o", "cyclonedx-json"]
