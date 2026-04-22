@@ -35,3 +35,4 @@ jobs:
           name: project-sbom
           path: ./sbom.json
           compression-level: 0
+          
