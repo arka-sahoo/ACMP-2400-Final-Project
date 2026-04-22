@@ -1,5 +1,5 @@
 name: 'SBOM Generation and Scanning'
-description: 'Generates a Software Bill of Materials (SBOM) and scans for known vulnerabilities'
+description: 'Generates a Software Bill of Materials (SBOM) and scans for known vulnerabilities falling for any critical vulnerabilities'
 author: 'arka-sahoo@'
 outputs:
   sbom-file:
