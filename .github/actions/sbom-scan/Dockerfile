@@ -8,4 +8,6 @@ COPY requirements.txt .
 
 COPY entrypoint.sh .
 
-ENTRYPOINT ["bash", "entrypoint.sh"]
+RUN chmod +x entrypoint.sh
+
+ENTRYPOINT ["/app/entrypoint.sh"]
