@@ -1,6 +1,5 @@
 FROM ubuntu:latest@sha256:c4a8d5503dfb2a3eb8ab5f807da5bc69a85730fb49b5cfca2330194ebcc41c7b
 
-# Install TF
 RUN apt-get update && apt-get install -y --no-install-recommends gnupg software-properties-common wget
 
 RUN wget -O - https://apt.releases.hashicorp.com/gpg | gpg --dearmor -o /usr/share/keyrings/hashicorp-archive-keyring.gpg
@@ -9,8 +8,4 @@ RUN echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/h
 
 RUN apt-get update && apt-get install -y --no-install-recommends terraform
 
-WORKDIR /app
-
-COPY entrypoint.sh .
-
-ENTRYPOINT ["entrypoint.sh"]
+CMD ["echo", "hello world"]
