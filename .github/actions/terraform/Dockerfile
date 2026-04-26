@@ -13,4 +13,4 @@ WORKDIR /app
 
 COPY entrypoint.sh .
 
-ENTRYPOINT ["entrypoint.sh"]
+ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
