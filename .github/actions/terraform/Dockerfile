@@ -13,8 +13,6 @@ WORKDIR /github/workspace
 
 COPY entrypoint.sh /entrypoint.sh
 
-COPY stage1/main.tf /main.tf
-
 RUN chmod +x /entrypoint.sh
 
 ENTRYPOINT ["/entrypoint.sh"]
