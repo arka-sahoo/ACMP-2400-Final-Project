@@ -9,6 +9,5 @@ export TF_STAGE=${INPUT_TF_STAGE}
 
 cd stage1/
 
-terraform init -reconfigure
 terraform plan
 terraform apply --auto-approve
