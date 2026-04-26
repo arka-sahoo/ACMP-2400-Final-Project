@@ -13,4 +13,4 @@ WORKDIR /app
 
 COPY entrypoint.sh .
 
-ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
+ENTRYPOINT ["./.github/actions/terraform/entrypoint.sh"]
