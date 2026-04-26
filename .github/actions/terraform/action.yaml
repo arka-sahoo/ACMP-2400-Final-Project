@@ -5,9 +5,6 @@ outputs:
   sbom-file:
     description: 'The syft generated SBOM'
     value: ${{ steps.sbom-gen-and-scane.outputs.sbom-file }}
-runs:
-  using: 'docker'
-  image: 'Dockerfile'
 inputs:
   ARM_CLIENT_ID:
     description: 'The Azure CLient ID'
