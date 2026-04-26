@@ -9,7 +9,7 @@ terraform {
     resource_group_name = "rg-acmp-final"
     storage_account_name = "acmp2400storageaccount"
     container_name = "big-tf-state-acmp2400"
-    use_azuread_auth = true
+    key = "stage1.tfstate"
   }
 }
 
@@ -17,10 +17,10 @@ provider "azurerm" {
   features {}
 }
 
-    resource "azurem_container_registry" "arkasahoo-acr" {
-      name = "acrarkasahooacmp2400"
-      resource_group_name = "rg-arkasahoo"
-      location = "Central US"
-      sku = "Basic"
-      admin_enabled = false
-    }
+resource "azurem_container_registry" "arkasahoo-acr" {
+  name = "acrarkasahooacmp2400"
+  resource_group_name = "rg-arkasahoo"
+  location = "Central US"
+  sku = "Basic"
+  admin_enabled = false
+}
