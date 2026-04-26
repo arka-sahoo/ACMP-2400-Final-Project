@@ -7,5 +7,7 @@ export ARM_TENANT_ID=${INPUT_ARM_TENANT_ID}
 export STATE_KEY=${INPUT_STATE_KEY}
 export TF_STAGE=${INPUT_TF_STAGE}
 
+cd stage1/
+
 terraform plan
 terraform apply --auto-approve
