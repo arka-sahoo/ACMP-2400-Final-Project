@@ -50,3 +50,19 @@ jobs:
         ARM_TENANT_ID: ${{ secrets.ARM_TENANT_ID }}
         STATE_KEY: 'arkasahoo'
         TF_STAGE: 'stage1'
+
+  build-tag-push:
+    needs: terraform-stage-1
+    runs-on: ubuntu-latest
+    steps:
+      - name: get_code
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
+      - name: docker_build_tag_push
+        env:
+          ARM_CLIENT_ID: ${{ secrets.ARM_CLIENT_ID }}
+          ARM_CLIENT_SECRET: ${{ secrets.ARM_CLIENT_SECRET }}
+        run:
+          docker build -t application-final .
+          docker tag application-final acracmp2400.azurecr.io/final
+          docker login acrarkasahooacmp2400.azurecr.io --username "$ARM_CLIENT_ID" --password "$ARM_CLIENT_SECRET"
+          docker push acrarkasahooacmp2400.azurecr.io/final
