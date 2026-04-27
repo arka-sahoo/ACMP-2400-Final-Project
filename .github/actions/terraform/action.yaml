@@ -1,28 +1,24 @@
-name: 'SBOM Generation and Scanning'
-description: 'Generates a Software Bill of Materials (SBOM) and scans for known vulnerabilities falling on any critical vulnerabilities'
+name: 'Terraform container actions'
+description: 'Terraform action for demonstrations'
 author: 'arka-sahoo@'
-outputs:
-  sbom-file:
-    description: 'The syft generated SBOM'
-    value: ${{ steps.sbom-gen-and-scane.outputs.sbom-file }}
 inputs:
   ARM_CLIENT_ID:
-    description: 'The Azure CLient ID'
+    description: 'Azure CLient ID'
     required: true
   ARM_CLIENT_SECRET:
-    description: 'The azure client secret'
+    description: 'Azure client secret'
     required: true
   ARM_SUBSCRIPTION_ID:
-    description: 'The azure sub'
+    description: 'Azure subscription id'
     required: true
   ARM_TENANT_ID:
-    description: 'The azure tenant id'
+    description: 'Azure tenant id'
     required: true
   STATE_KEY:
-    description: 'The unique key for state lookup'
+    description: 'Unique value to identify your state slice'
     required: true
-  TF_STAGE:
-    description: 'The TF deployment stage'
+  TF_STAGE: 
+    description: 'The terraform directory to use in the planning/apply phase'
     required: true
 runs:
   using: 'docker'

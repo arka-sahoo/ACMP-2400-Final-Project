@@ -13,5 +13,4 @@ if [[ "TF_STAGE" == "stage1" ]]; then
     terraform -chdir=${INPUT_TF_STAGE} init -backend-config="ksy=${INPUT_STATE_KEY}.tfstate"
     terraform -chdir=${INPUT_TF_STAGE} plan -out=${INPUT_TF_STAGE}.tfplan
     terraform -chdir=${INPUT_TF_STAGE} apply -out=${INPUT_TF_STAGE}.tfplan
-
 fi
