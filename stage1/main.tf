@@ -17,7 +17,7 @@ provider "azurerm" {
   features {}
 }
 
-resource "azurem_container_registry" "arkasahoo-acr" {
+resource "azurerm_container_registry" "arkasahoo-acr" {
   name = "acrarkasahooacmp2400"
   resource_group_name = "rg-arkasahoo"
   location = "Central US"
