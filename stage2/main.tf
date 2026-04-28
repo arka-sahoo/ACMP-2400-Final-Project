@@ -30,16 +30,16 @@ resource "azurerm_container_registry" "arkasahoo-acr" {
   admin_enabled = false
 }
 
-resource "azurerm_container_group" "aci-arkasahoo-acmp" {
-  name                = "aci-arkasahoo-acmp"
+resource "azurerm_container_group" "arkasahoo-aci" {
+  name                = "acmp-arkasahoo-aci"
   location            = "Central US"
   resource_group_name = "rg-arkasahoo"
   ip_address_type     = "Public"
-  dns_name_label      = "aci-arkasahoo-acmp"
+  dns_name_label      = "acmp-arkasahoo-instance"
   os_type             = "Linux"
 
   container {
-    name   = "final-app"
+    name   = "final"
     image  = "acrarkasahooacmp2400.azurecr.io/final:latest"
     cpu    = "0.5"
     memory = "1.5"
