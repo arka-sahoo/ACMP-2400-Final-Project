@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -0
+set -e
 
 export ARM_CLIENT_ID=${INPUT_ARM_CLIENT_ID}
 export ARM_CLIENT_SECRET=${INPUT_ARM_CLIENT_SECRET}
