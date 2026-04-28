@@ -20,6 +20,9 @@ inputs:
   TF_STAGE: 
     description: 'The terraform directory to use in the planning/apply phase'
     required: true
+  DJANGO_SECRET_KEY_PROD:
+    description: 'The secret key for django to startup'
+    required: false
 runs:
   using: 'docker'
   image: 'Dockerfile'
