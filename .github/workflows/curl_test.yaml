@@ -83,5 +83,5 @@ jobs:
         ARM_SUBSCRIPTION_ID: ${{ secrets.ARM_SUBSCRIPTION_ID }}
         ARM_TENANT_ID: ${{ secrets.ARM_TENANT_ID }}
         STATE_KEY: 'arkasahoo'
-        TF_STAGE: 'stage1'
+        TF_STAGE: 'stage2'
         DJANGO_SECRET_KEY_PROD: ${{ secrets.DJANGO_SECRET_KEY_PROD }}
