@@ -30,8 +30,8 @@ resource "azurerm_container_registry" "arkasahoo-acr" {
   admin_enabled = false
 }
 
-resource "azurerm_container_group" "arkasahoo-aci" {
-  name                = "acmp-arkasahoo-aci"
+resource "azurerm_container_group" "aci-arkasahoo-acmp" {
+  name                = "aci-arkasahoo-acmp"
   location            = "Central US"
   resource_group_name = "rg-arkasahoo"
   ip_address_type     = "Public"
